@@ -1,0 +1,59 @@
+<web-app>
+    <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+</welcome-file-list>
+
+    <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.todo.LoginServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+</servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddTaskServlet</servlet-name>
+        <servlet-class>com.todo.AddTaskServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddTaskServlet</servlet-name>
+        <url-pattern>/AddTaskServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    <servlet-name>ViewTasksServlet</servlet-name>
+    <servlet-class>com.todo.ViewTasksServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ViewTasksServlet</servlet-name>
+    <url-pattern>/ViewTasksServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>EditTaskServlet</servlet-name>
+    <servlet-class>com.todo.EditTaskServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>EditTaskServlet</servlet-name>
+    <url-pattern>/EditTaskServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>DeleteTaskServlet</servlet-name>
+    <servlet-class>com.todo.DeleteTaskServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>DeleteTaskServlet</servlet-name>
+    <url-pattern>/DeleteTaskServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.todo.LogoutServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+</servlet-mapping>
+</web-app>

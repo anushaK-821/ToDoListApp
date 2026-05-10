@@ -1,0 +1,78 @@
+{% extends 'base.html' %} {% block content %}
+<section class="auth-page">
+  <div class="auth-shell">
+    <div class="auth-hero">
+      <div class="auth-badge">Task management, simplified</div>
+      <h1>ToDoReminder</h1>
+      <p>
+        A clean workspace for keeping tasks organized, prioritized, and easy to
+        track.
+      </p>
+
+      <div class="auth-points">
+        <div class="auth-point">
+          <span>01</span>
+          <div>
+            <strong>Fast access</strong>
+            <p>Sign in and get to your task list in seconds.</p>
+          </div>
+        </div>
+        <div class="auth-point">
+          <span>02</span>
+          <div>
+            <strong>Priority aware</strong>
+            <p>Keep high, medium, and low priorities clearly visible.</p>
+          </div>
+        </div>
+        <div class="auth-point">
+          <span>03</span>
+          <div>
+            <strong>Simple workflow</strong>
+            <p>Add, edit, search, and complete tasks without distractions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="auth-card card">
+      <h2>Welcome Back</h2>
+      <p class="auth-subtitle">Sign in to continue managing your task board.</p>
+
+      {% if error %}
+      <div class="flash error">{{ error }}</div>
+      {% endif %}
+
+      <form method="post" action="{{ url_for('login') }}" class="auth-form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            autofocus
+            placeholder="Enter your username"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="Enter your password"
+          />
+        </div>
+
+        <button type="submit" class="btn-primary auth-submit">Sign In</button>
+      </form>
+
+      <p class="hint">
+        Demo credentials: <strong>admin</strong> / <strong>admin123</strong>
+      </p>
+    </section>
+  </div>
+</section>
+{% endblock %}
